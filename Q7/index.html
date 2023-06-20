@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Common Events</title>
+  <style>
+    img {
+      width: 300px;
+      height: 300px;
+      transition: transform 0.3s;
+    }
+    img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Common Events</h1>
+  <p>Click anywhere on the page to display the coordinates (x, y) of the click.</p>
+  <p>Press any key on the keyboard to display the key code of the pressed key.</p>
+  <img id="myImage" src="ahmad.jpg" alt="Original Image">
+
+  <script>
+    // Get the image element
+    var image = document.getElementById("myImage");
+
+    // Event listener for click event
+    document.addEventListener("click", function(event) {
+      var x = event.clientX;
+      var y = event.clientY;
+      alert("Clicked at coordinates (x, y): " + x + ", " + y);
+    });
+
+    // Event listener for keydown event
+    document.addEventListener("keydown", function(event) {
+      var keyCode = event.keyCode;
+      alert("Key pressed with code: " + keyCode);
+    });
+
+    // Event listener for mouseover event on the image
+    image.addEventListener("mouseover", function() {
+      image.src = "ahmad_new.jpg";
+    });
+
+    // Event listener for mouseout event on the image (optional, if you want to change back to the original image)
+    image.addEventListener("mouseout", function() {
+      image.src = "ahmad.jpg";
+    });
+  </script>
+</body>
+</html>
