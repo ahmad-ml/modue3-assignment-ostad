@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Browser Information</title>
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1>Browser Information</h1>
+  <p id="browserInfo"></p>
+
+  <!-- JavaScript code -->
+  <script>
+    // Function to detect browser name and version
+    function detectBrowser() {
+      var browserName = navigator.appName;
+      var browserVersion = navigator.appVersion;
+
+      // Update the HTML element with the browser information
+      var browserInfoElement = document.getElementById("browserInfo");
+      browserInfoElement.innerHTML = "Browser: " + browserName + "<br>Version: " + browserVersion;
+    }
+
+    // Call the function to display the browser information
+    detectBrowser();
+  </script>
+
+</body>
+</html>
